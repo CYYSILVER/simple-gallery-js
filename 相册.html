@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/photo-album.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+      document.documentElement.addEventListener(
+        'error',
+        event => {
+          console.log(event)
+          if (event.target.tagName.toLowerCase() == 'img') {
+            event.target.src = '/imgs/default.png'
+          }
+        },
+        true
+      )
+    </script>
+  </head>
+  <body>
+    <div class="photo-album">
+      <ul class="photo-album__container">
+        <li><img src="https://dummyimage.com/1200x800/CCCCCC/FFFFFF.png?text=GALLERY%20PREVIEW0" alt="" /></li>
+        <li><img src="https://dummyimage.com/1200x800/CCCCCC/FFFFFF.png?text=GALLERY%20PREVIEW1" alt="" /></li>
+        <li><img src="https://dummyimage.com/1200x800/CCCCCC/FFFFFF.png?text=GALLERY%20PREVIEW2" alt="" /></li>
+        <li><img src="https://dummyimage.com/1200x800/CCCCCC/FFFFFF.png?text=GALLERY%20PREVIEW3" alt="" /></li>
+        <li><img src="https://dummyimage.com/1200x800/CCCCCC/FFFFFF.png?text=GALLERY%20PREVIEW4" alt="" /></li>
+        <li><img src="https://dummyimage.com/1200x800/CCCCCC/FFFFFF.png?text=GALLERY%20PREVIEW5" alt="" /></li>
+        <li><img src="https://dummyimage.com/1200x800/CCCCCC/FFFFFF.png?text=GALLERY%20PREVIEW6" alt="" /></li>
+        <li><img src="https://dummyimage.com/1200x800/CCCCCC/FFFFFF.png?text=GALLERY%20PREVIEW7" alt="" /></li>
+        <li><img src="https://dummyimage.com/1200x800/CCCCCC/FFFFFF.png?text=GALLERY%20PREVIEW8" alt="" /></li>
+      </ul>
+    </div>
+    <div class="modal hidden">
+      <div class="modal__display">
+        <!-- // TODO: 更改默认未加载图片-->
+        <a href="/imgs/mirroEdge/Mirror's Edge  Catalyst 10.17.2016 - 20.35.34.82.png" target="_blank">
+          <img src="/imgs/mirroEdge/Mirror's Edge  Catalyst 10.17.2016 - 20.35.34.82.png" alt="" class="modal__img" />
+        </a>
+        <!-- <a href="/imgs/mirroEdge/Mirror's Edge  Catalyst 10.17.2016 - 20.35.34.82.png" target="_blank"> <img src="/imgs/mirroEdge/Mirror's Edge  Catalyst 10.17.2016 - 20.35.34.82.png" alt="" class="modal__img" /> </a> -->
+      </div>
+      <button class="modal__arrow modal__arrow--left"><i>&lt;</i></button> <button class="modal__arrow modal__arrow--right"><i>&gt;</i></button>
+    </div>
+  </body>
+</html>
+<script src="/js/modalAlbum.js"></script>
